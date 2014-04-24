@@ -1,3 +1,10 @@
+##how to run
+## initiate a square matrix and store it in a variable. for. e.g, myMat<- matrix(1:4, ncol = 2, nrow = 2)
+## make functions by calling makeCacheMatrix(myMat) and store the result in another variable, for. e.g, res<- makeCacheMatrix(myMat)
+## call cacheSolve with res, for. e.g, cacheSolve(res) and voila... you have your answer
+
+
+
 ## makeCacheMatrix contains the getters and setters with global variable for the inverse of matrix. 
 ## cacheSolve has the capability to check if an inverse of a matrix has already been calculated. 
 ## done on 23rd of April, 2014
@@ -27,7 +34,7 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x' stored in 'm'
   
-  
+    #x<-as.data.frame(x)
     m <- x$getinv()
     if(!is.null(m)) {
       message("getting cached data")
